@@ -1,0 +1,15 @@
+{
+	"name": "telegram_gcloner",
+	"description": "telegram_gcloner",
+	"repository": "https://github.com/charlesbrown502/telegram_gcloner",
+	"keywords": ["Gclone","TG"],
+	"repository": "https://github.com/charlesbrown502/telegram_gcloner",
+        "website": "https://github.com/charlesbrown502/telegram_gcloner",
+        "success_url": "https://github.com/charlesbrown502/telegram_gcloner/blob/master/README.md",
+	"env": {
+		"CONFIG_FILE_URL": {
+			"description": "config file url link."
+		}
+	},
+    	"stack": "container"
+}
