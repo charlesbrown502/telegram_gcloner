@@ -9,13 +9,13 @@ RUN apt-get -qq update && apt-get -qq install -y --no-install-recommends \
     curl wget unzip pv jq nginx npm && \
     locale-gen en_US.UTF-8 && \
     wget -qO- https://git.io/gclone.sh && \
-    curl https://github.com/mawaya/rclone/releases/download/fclone-v0.4.1/fclone-v0.4.1-linux-amd64.zip && \
+    aria2 https://github.com/mawaya/rclone/releases/download/fclone-v0.4.1/fclone-v0.4.1-linux-amd64.zip && \
     unzip fclone-v0.4.1-linux-amd64.zip && mv fclone-v0.4.1-linux-amd64/fclone /usr/bin/ && chmod +x /usr/bin/fclone && rm -r fclone-v0.4.1-linux-amd64 && \
     wget https://raw.githubusercontent.com/smartass08/telegram_gcloner/master/requirements.txt && \
     pip3 install --no-cache-dir -r requirements.txt && \
     rm requirements.txt && \
     apt-get -yqq purge git && \
-    apt-get -y autoremove --purge && rm -rf /var/lib/apt/lists/* && apt-get -y clean
+    apt-get -y autoremove && rm -rf /var/lib/apt/lists/* && apt-get -y clean
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
