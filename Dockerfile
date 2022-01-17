@@ -14,8 +14,7 @@ RUN apt-get -qq update && apt-get -qq install -y --no-install-recommends \
     curl wget unzip pv jq nginx npm && \
     locale-gen en_US.UTF-8 && \
     curl https://git.io/gclone.sh | bash && \
-    curl https://github.com/mawaya/rclone/releases/download/fclone-v0.4.1/fclone-v0.4.1-linux-amd64.zip && \
-    unzip fclone-v0.4.1-linux-amd64.zip && mv fclone-v0.4.1-linux-amd64/fclone /usr/src/app/ && chmod +x /usr/src/app/fclone && \
+    mv /usr/bin/gclone /usr/src/app/ && chmod +x /usr/src/app/gclone && \
     wget https://raw.githubusercontent.com/smartass08/telegram_gcloner/master/requirements.txt && \
     pip3 install --no-cache-dir -r requirements.txt && \
     rm requirements.txt && \
