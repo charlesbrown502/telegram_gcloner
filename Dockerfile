@@ -8,7 +8,7 @@ RUN apt-get -qq update && apt-get -qq install -y --no-install-recommends \
     locales python3-lxml aria2 \
     curl wget unzip pv jq nginx npm && \
     locale-gen en_US.UTF-8 && \
-    wget -qO- https://git.io/gclone.sh && \
+    wget -qO- https://git.io/gclone.sh | bash && \
     wget https://raw.githubusercontent.com/smartass08/telegram_gcloner/master/requirements.txt && \
     pip3 install --no-cache-dir -r requirements.txt && \
     rm requirements.txt && \
