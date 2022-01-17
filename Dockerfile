@@ -10,7 +10,7 @@ RUN apt-get -qq update && apt-get -qq install -y --no-install-recommends \
     locale-gen en_US.UTF-8 && \
     curl https://git.io/gclone.sh && bash gclone.sh && \
     curl https://github.com/mawaya/rclone/releases/download/fclone-v0.4.1/fclone-v0.4.1-linux-amd64.zip && \
-    unzip fclone-v0.4.1-linux-amd64.zip && mv fclone-v0.4.1-linux-amd64/fclone /usr/bin/ && chmod +x /usr/bin/fclone && rm -r fclone-v0.4.1-linux-amd64
+    unzip fclone-v0.4.1-linux-amd64.zip && mv fclone-v0.4.1-linux-amd64/fclone /usr/bin/ && chmod +x /usr/bin/fclone && rm -r fclone-v0.4.1-linux-amd64 && \
     wget https://raw.githubusercontent.com/smartass08/telegram_gcloner/master/requirements.txt && \
     pip3 install --no-cache-dir -r requirements.txt && \
     rm requirements.txt && \
