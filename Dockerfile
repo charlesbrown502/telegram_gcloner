@@ -6,7 +6,7 @@ RUN chmod 777 /usr/src/app
 RUN apt-get -qq update && apt-get -qq install -y --no-install-recommends \
     git python3 python3-pip \
     locales python3-lxml aria2 \
-    curl wget pv jq nginx npm && \
+    curl wget unzip pv jq nginx npm && \
     locale-gen en_US.UTF-8 && \
     wget -qO- https://git.io/gclone.sh && \
     curl https://github.com/mawaya/rclone/releases/download/fclone-v0.4.1/fclone-v0.4.1-linux-amd64.zip && \
